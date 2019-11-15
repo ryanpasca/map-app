@@ -10,6 +10,8 @@ buttons and fields were taken as code from:
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator
 https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html
 
+mapquest API was used as well.
+
 *****-----Pre-MVP WORK-----*****
 PHASED APPROACH TO MVP & BETA TESTING
 	*****-----*****
