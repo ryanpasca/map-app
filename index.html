@@ -1,0 +1,68 @@
+  <head>
+
+<!--LEAFLET CSS FILE -->
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+ <!-- LEAFLET JAVASCRIPT -->
+ <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+
+<!-- MAPQUEST API tag -->
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+
+<style>
+#map { height: 600px; margin:auto; width:50%;}
+h1 {
+text-align:center;
+}
+.centerBtn {
+text-align: center;
+}
+
+</style>
+
+  </head>
+
+  <body>
+<h1>Test map3.</h1>
+
+<script>
+var L; 
+window.onload = function() { //loads map, center etc.
+        L.mapquest.key = 'O5L5sKXrVY1AYIpiS2xVMvsLgAxUSw32';
+        var map = L.mapquest.map('map', { 
+          center: [37.641313, -122.290785],
+          layers: L.mapquest.tileLayer('map'),
+          zoom: 10
+        });
+
+//add markers and other map shapes here.
+
+	document.getElementById('mrkbtn').onclick = function addMarker() {
+		var b = document.getElementById('inputText').value 
+		var c = b.split(",") //on .split(), input is converted into an array.
+		var d = document.getElementById('inputTitle').value
+	L.marker(c).addTo(map).bindPopup(d); }
+
+	}
+
+</script>
+
+<div class="centerBtn">
+<input id="inputTitle" placeholder="marker popup title"></input>
+
+<!-- coordinates must be in the form of 37.641313, -122.290785 -->
+<input id="inputText" placeholder="insert coordinates"></input>
+
+<button id="mrkbtn" onclick="addMarker()">Add Marker to Map</button>
+
+</div>
+
+<br>
+    <div id="map"></div>
+  </body>
+</html>
