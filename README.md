@@ -3,6 +3,10 @@ building a mapping prototype
 
 README
 
+mapquest API was used. https://www.mapquest.com/
+
+Leaflet.js, a javasript library, is used too. https://leafletjs.com/reference-1.5.0.html
+
 this was built with simple API code from MDN tutorial:
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 
@@ -10,7 +14,7 @@ buttons and fields were taken as code from:
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator
 https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html
 
-mapquest API was used as well.
+
 
 *****-----Pre-MVP WORK-----*****
 PHASED APPROACH TO MVP & BETA TESTING
